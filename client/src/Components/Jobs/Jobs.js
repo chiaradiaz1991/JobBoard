@@ -2,12 +2,13 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Job from '../Job/Job';
 import Modal from '../Modal/Modal';
+import './Jobs.css';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
-export default function Jobs({ jobs }) {
+const Jobs = ({ jobs }) => {
   const [activeStep, setActiveStep] = React.useState(0);
   const [selectedJob, setSelectedJob] = React.useState({});
   const [open, setOpen] = React.useState(false);
@@ -35,12 +36,12 @@ export default function Jobs({ jobs }) {
 
   console.log('job is ', jobs[0])
   return (
-    <div className="jobContainer" role="main">
+    <div className="jobsContainer" role="main">
       <Modal open={open} job={selectedJob} handleClose={handleClose}/>
-      <Typography varient="h4" component="h1">
-        Entry level software jobs
+      <Typography className="text" variant="h3" component="h2">
+        Jobs for Developers Junior
       </Typography>
-      <Typography varient="h6" component="h1">
+      <Typography className="text" variant="h5" component="h2">
         Found {jobsLenght} jobs
       </Typography>
 
@@ -52,9 +53,9 @@ export default function Jobs({ jobs }) {
         />)
       }
 
-      <div>
+      <Typography className="text" variant="h5" component="h2">
         Page {activeStep + 1} of {pages}
-      </div>
+        </Typography>
 
       <MobileStepper
         variant="progress"
@@ -74,8 +75,8 @@ export default function Jobs({ jobs }) {
         </Button>
         }
       />
-
-
     </div>
   )
 }
+
+export default Jobs;

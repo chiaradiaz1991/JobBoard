@@ -1,13 +1,18 @@
 .job {
-  width: 80%;
   display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-  padding: 10px 0;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 20px;
+  flex-direction: column;
 }
 
 
 .job:hover {
   cursor: pointer;
-  color: darkgray;
+  color: #3e6096;
+}
+
+.jobContainer {
+  margin: 10px auto;
+  width: 80%;
 }
