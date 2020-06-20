@@ -10,3 +10,10 @@ This application is build with:
 
 
 Aims to be a Job board from public Github API.
+
+
+## to run the project
+
+1. clone this repo
+2. npm install
+3. npm run start /client
