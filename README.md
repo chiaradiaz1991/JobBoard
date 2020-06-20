@@ -1,4 +1,4 @@
-# JobBoard
+# JobBoard Application
 
 This application is build with:
 
